@@ -53,7 +53,7 @@ for (var i = 0; i < previousSearchHistory.length; i++) {
 var API_KEY = apikey
 
 function getGeoLocation(query, limit = 5) {
-    return fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${limit}&appid=${apikey}`)
+    return fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${limit}&appid=${apikey}`)
 }
 
 function getCurrentWeather(arguments) {
