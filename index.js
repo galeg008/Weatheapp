@@ -106,9 +106,9 @@ function createWeatherDisplay(location) {
             }
         })
 
-        // .catch(error => {
-        //     document.body.textContent = error.message
-        // })
+        .catch(error => {
+            document.body.textContent = error.message
+        })
 
 
 }
