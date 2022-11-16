@@ -16,7 +16,7 @@ startTimer();
 
 var input = document.querySelector('#input')
 
-//currently ust listens for enter keyup, also need listern on button click on search
+//currently ust listens for enter keyup, also need listen on button click on search
 input.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         createWeatherDisplay(event.target.value)
@@ -100,15 +100,15 @@ function createWeatherDisplay(location) {
                         createWeatherElements(weatherData)
                         addToHistory(location)
                     })
-                    // .catch(error => {
-                    //     document.body.textContent = error.message
-                    // })
+                    .catch(error => {
+                        document.body.textContent = error.message
+                    })
             }
         })
 
-        // .catch(error => {
-        //     document.body.textContent = error.message
-        // })
+        .catch(error => {
+            document.body.textContent = error.message
+        })
 
 
 }
@@ -126,11 +126,3 @@ function createWeatherElements(weatherData) {
 }
 
 
-// var cardContain =  document.createElement("div")
-// cardContain.setAttribute('class', 'weathercard')
-// var temp = document.createElement('p')
-// tempj.textContent = 'somedata'
-// var wind = document.createElement('p')
-// var hum = document.createElement('p')
-// cardContain.append(temp,wind,hum)
-// document.getElementById("futureWeather").append(cardContain)

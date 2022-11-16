@@ -32,9 +32,7 @@ background-size: cover;
 }
 
 #results {
-    width: 85%;
-    border: solid black 2px;
-    height: 500px
+    text-align: end;
 }
 .citybtn {
 margin: 5px;
