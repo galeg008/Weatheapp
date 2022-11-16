@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Weatherapp</title>
-<script 
-type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 </head>
+
 <body>
     <script>
         var keyHash = "xbZG13ax99Lcy6JL5f_K4";
         var apikey;
         fetch(
-          `https://ljgvrb40q2.execute-api.us-west-2.amazonaws.com/dev/keyprr/${keyHash}`
+            `https://ljgvrb40q2.execute-api.us-west-2.amazonaws.com/dev/keyprr/${keyHash}`
         )
-          .then((res) => res.json())
-          .then(({ data }) => (apikey = data));
-      </script>
-<div id="main">
+            .then((res) => res.json())
+            .then(({ data }) => (apikey = data));
+    </script>
     <h2 class="date-time text-center"></h2>
-   <div id="searcharea">
-       <input type="text" id="input" placeholder = "Search for a location..." />
-       <button id="searchbtn">Search </button>
-    <div id="cities" ></div>
-   </div>
-    <div id="results">
-        <div>
-
+    <div id="main">
+        <div id="searcharea">
+            <input type="text" id="input" placeholder="Search for a location..." />
+            <button id="searchbtn">Search </button>
+            <div id="cities"></div>
         </div>
-        <div id="futureWeather">
+        <div id="results">
+            <div>
 
+            </div>
+            <div id="futureWeather">
+
+            </div>
         </div>
     </div>
-</div>
-     <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
