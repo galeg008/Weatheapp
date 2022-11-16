@@ -1,0 +1,41 @@
+html,body {
+    height: 100%;
+
+}
+
+body {
+background: url(https://preview.redd.it/mthr3x0q3m091.png?width=960&crop=smart&auto=webp&s=df06400cd37f9f33eeb7712d6054f83ca4aca6af);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#main {
+    display: flex;
+}
+#cities {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#searcharea {
+    width: 12%;
+    margin-bottom: 50px;
+}
+
+#searchbtn {
+   margin-top: 9px;
+    background-color: rgb(125, 107, 243);
+    border:  10x;
+    
+}
+
+#results {
+    width: 85%;
+    border: solid black 2px;
+    height: 500px
+}
+.citybtn {
+margin: 5px;
+}
